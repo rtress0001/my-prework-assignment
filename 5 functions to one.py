@@ -21,7 +21,7 @@ def first_odds():
             print(x, end=" ")
 
 first_odds()
-
+print("")
 # Question 3: 
 # Writing a function that determines the max of a list this function
 a_list= [-41,3,5,7,9,2,3,21]
@@ -34,7 +34,7 @@ def max_num_in_list(a_list):
        if x > y:
           y = x
     return y
-print(max_num_in_list(a_list))
+print("The maximum numb in the list is " + str(max_num_in_list(a_list)))
 
 #Question 4: 
 #Leap year function that is using the complex logic of x and y or z
@@ -48,7 +48,7 @@ def is_a_leap_year(a_year):
         leap_year  = False
     return  leap_year
 
-print(is_a_leap_year(int(input("Type an interger for testing: "))))
+print(is_a_leap_year(int(input("Type an interger year for testing: "))))
 
 #Testing years for not running code lots of times
 #for x in range(100):
@@ -57,23 +57,32 @@ print(is_a_leap_year(int(input("Type an interger for testing: "))))
 #    print(is_a_leap_year(a_year))
 
 #declaring a list for testing
-b_list = [5,4,8,2,1,0]
+b_list = [6,5,4,3,2,1]
 
 #Question 5: 
 #Function checks if the frist element of the list plus 1 is equal to the second element of a list using a slice returns
 #Boolean function it is either increasing 1,2,3,4 or decreasing 4,3,2,1 is still consecitive
 def is_consecutive (b_list):
     elementzero = b_list[0]
+    y = False
     for element in b_list[1:]:
-        if elementzero + 1 == element or elementzero -1 == element:
-            y = True
+        if elementzero + 1 == element:
             elementzero = element
         else:
-            y = False
             break
+        if elementzero == b_list[-1]:
+            return True
+    elementzero = b_list[0]
+    for element in b_list[1:]:
+        if elementzero - 1 == element:
+            elementzero = element
+        else:
+            break
+        if elementzero == b_list[-1]:
+            return True
     return y
 #printing the boolean of the is_consecutive
-print("the boolean for is the list consecutivity" + str(is_consecutive(b_list)))
+print("the boolean for is the list consecutivity " + str(is_consecutive(b_list)))
 
     
 

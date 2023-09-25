@@ -64,21 +64,25 @@ b_list = [6,5,4,3,2,1]
 #Boolean function it is either increasing 1,2,3,4 or decreasing 4,3,2,1 is still consecitive
 def is_consecutive (b_list):
     elementzero = b_list[0]
+    count = 0
     y = False
     for element in b_list[1:]:
         if elementzero + 1 == element:
             elementzero = element
+            count += 1
         else:
             break
-        if elementzero == b_list[-1]:
+    if count+1  == len(b_list):
             return True
     elementzero = b_list[0]
+    count = 0
     for element in b_list[1:]:
         if elementzero - 1 == element:
             elementzero = element
+            count += 1
         else:
             break
-        if elementzero == b_list[-1]:
+    if count+1  == len(b_list):
             return True
     return y
 #printing the boolean of the is_consecutive

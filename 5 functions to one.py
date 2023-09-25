@@ -86,7 +86,8 @@ def is_consecutive (b_list):
             return True
     return y
 #printing the boolean of the is_consecutive
-print("the boolean for is the list consecutivity " + str(is_consecutive(b_list)))
+consecutive  = is_consecutive(b_list)
+print("the boolean for is the list consecutivity " + str(consecutive))
 
     
 
